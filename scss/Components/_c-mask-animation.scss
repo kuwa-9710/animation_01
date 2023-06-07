@@ -1,0 +1,39 @@
+@use "../Global/" as *;
+
+.c-mask-animation {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  --translateX: 0px;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: $cWhite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(var(--translateX));
+  }
+}
+
+.c-mask-animation--fixed {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  --translateX: 0px;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: $cWhite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(var(--translateX));
+  }
+}

@@ -1,0 +1,33 @@
+@use "../Global/" as *;
+
+.c-loading {
+  position: fixed;
+  z-index: 9999;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+}
+
+.c-loading__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $cBlack;
+}
+
+.c-loading__line {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: 3px solid $cWhite;
+}
+
+.c-loading__image {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

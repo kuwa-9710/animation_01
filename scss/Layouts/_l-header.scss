@@ -1,0 +1,104 @@
+@use "../Global/" as *;
+
+.l-header {
+  opacity: 0;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 0 30px;
+}
+
+.l-header__inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.l-header__logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: $cBlack;
+
+  & img {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+.l-header__menu__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 27px;
+}
+
+.l-header__menu__item {
+  color: #fff;
+  padding: 0px 0px 10px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 3px,
+    $cWhite 3px 6px
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 0.5rem;
+  background-position: bottom;
+}
+
+.l-header .c-button {
+  margin-top: 0;
+}
+
+/* =================================================
+ tab
+=================================================== */
+@include media(tab) {
+  .l-header {
+    padding: 0 20px;
+  }
+  .l-header__logo {
+    & img {
+      width: 120px;
+    }
+  }
+  .l-header__menu__item {
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+/* =================================================
+ sp
+=================================================== */
+@include media(sp) {
+  .l-header {
+    height: 100px;
+  }
+  .l-header__menu__inner {
+    gap: 19px;
+  }
+  .l-header__menu__item {
+    font-size: 16px;
+    padding: 0 0 15px 0;
+    line-height: 14px;
+    letter-spacing: 0;
+  }
+}

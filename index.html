@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mv animation</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="l-header">
+        <div class="l-header__inner">
+            <span class="l-header__logo c-mask-animation--fixed">
+                <img src="./src/images/cafe_logo.svg" alt="NICE CAFE COFFEE Bakely & Coffee">
+            </span>
+            <nav class="l-header__menu">
+                <ul class="l-header__menu__inner">
+                    <li class="l-header__menu__item c-mask-animation">menu</li>
+                    <li class="l-header__menu__item c-mask-animation">concept</li>
+                    <li class="l-header__menu__item c-mask-animation">contact</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- loading animation -->
+    <div class="c-loading">
+        <div class="c-loading__bg"></div>
+        <span class="c-loading__line"></span>
+        <img class="c-loading__image" src="./src/images/cafe_logo.svg">
+    </div>
+
+    <!-- mv -->
+    <div class="l-mv">
+        <img src="./src/images/cafe_logo.svg" alt="NICE CAFE COFFEE Bakely & Coffee">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
